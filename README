@@ -1,0 +1,15 @@
+This code can bypass noexec running shellcode in bash
+and using memfd_create.
+
+-- compile
+$ perl build.pl
+
+-- how to use
+send the generated file (exec.sh) to the target system,
+the system must have bash, dd, and RW access to
+/proc/self/mem, then run:
+
+$ bash exec.sh /path/to/non-executable-file args...
+
+-- demo
+https://youtu.be/o2Iao7NNXWA
