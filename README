@@ -2,6 +2,11 @@ This code can bypass noexec running shellcode in bash
 and using memfd_create.
 
 -- compile
+edit the base.sh file and replace the socket_offset
+variable with the libc offset of the target system
+relative to the socket function.
+
+then:
 $ perl build.pl
 
 -- how to use
